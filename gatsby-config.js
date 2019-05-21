@@ -5,7 +5,6 @@ try {
   contentfulConfig = require('./.contentful')
 } catch (_) {}
 console.log('-----------LOG THE CONFIG----------')
-console.log(contentfulConfig.accessToken)
 // hooray security!
 console.log(process.env.GATSBY_PREVIEW_ACCESS_TOKEN)
 console.log('-----------LOG THE CONFIG----------')
