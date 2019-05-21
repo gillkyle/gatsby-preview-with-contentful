@@ -4,7 +4,11 @@ try {
   // Load the Contentful config from the .contentful.json
   contentfulConfig = require('./.contentful')
 } catch (_) {}
-
+console.log('-----------LOG THE CONFIG----------')
+console.log(contentfulConfig.accessToken)
+// hooray security!
+console.log(process.env.GATSBY_PREVIEW_ACCESS_TOKEN)
+console.log('-----------LOG THE CONFIG----------')
 // Overwrite the Contentful config with environment variables if they exist
 contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
